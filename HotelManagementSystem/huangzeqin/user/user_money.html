@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>个人中心|user center</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="../js/hf_hotel.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body onLoad="user_money_load()">
+  		<!--导航条-->
+      <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    	<div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../come_back.php">宏烽酒店管理系统</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">友情网站 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://www.baidu.com/">百度</a></li>
+                <li><a href="http://www.bootcss.com/">bootstrap中文网</a></li>
+                <li><a href="http://taobao.com/">淘宝网</a></li>
+              </ul>
+            </li>
+          </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="user_center.html" id="user_name5"></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人中心 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="user_center.html">基本资料</a></li>
+                <li><a href="user_money.html">申请资金</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="user_password.html">修改密码</a></li>
+                <li><a href="../exit.php">退出登录</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+    <div class="row">
+    	<br><br><br><!--头图-->
+        <img src="../Image/register_logo.jpg" class="img-rounded" height="120px" width="100%">
+        <!--导航-->
+        	<div class="col-lg-2">
+            <br>
+            <ul class="nav nav-pills nav-stacked">
+              <li role="presentation" class="text-center"><a href="user_center.html">基本资料</a></li>
+              <li role="presentation" class="active text-center"><a href="user_money.html">申请资金</a></li>
+              <li role="presentation" class="text-center"><a href="user_password.html">修改密码</a></li>
+            </ul>
+            </div>
+            <div class="col-lg-10">
+            <br>
+            	<div class="col-lg-12">
+                <div class="col-lg-4 img-thumbnail">
+                <h2>申请</h2>
+                <form action="../apply_add.php" class="form-horizontal" method="post" >
+                <div class="form-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">金额</label>
+                    <div class="col-sm-8">
+                    <input id="user_money_add_money1" type="number" name="money" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">理由</label>
+                    <div class="col-sm-8">
+                    <input id="user_money_add_rea1" type="text" name="reason" class="form-control" />
+                    </div>
+                 </div>
+                <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-7">
+                <input class="btn btn-primary" type="submit" value="提交" name="apply_btn" id="ware_io_add2">
+                </div>
+                </div>
+               </form>
+
+                </div>
+                <div class="col-lg-8 img-thumbnail">
+                <h2>记录</h2>
+                <div style="cursor:pointer" >
+                <table class="table table-bordered table-hover" id="apply_table">
+                  <tr >
+                          <th>申请号</th>
+                          <th>时间</th>
+                          <th>金额</th>
+                          <th>理由</th>
+                          <th>状态</th>
+                      </tr>
+                </table>
+                </div>
+                </div>
+                </div>
+            </div>
+     </div>
+     </div>
+</body>
+</html>

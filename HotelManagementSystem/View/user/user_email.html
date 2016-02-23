@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+	<title>宏烽酒店管理系统</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="../../Style/logo.css">
+</head>
+<body>
+	<div id="money" >
+		<div id="login-title">
+        	<div id="user_link">
+            <a href="../money/money.html">返回</a>
+            </div>
+        	<a class="big-title" href="../login.html"  >
+			<img src="../../Image/Logo.png" width="100" height="100">       
+			宏 烽 酒 店 管 理 系 统 
+            <span style="font-size:30px" >财务管理子系统</span>				<!不会把style转到CSS那里&间距有点怪>
+            </a>
+         </div>
+         <div id="user_main" >		<!左块导航>
+         <a class="u" href="user_center.html">基本资料</a><br>
+         <a class="u" href="user_password.html">修改密码</a><br>
+         <a class="u" href="user_email.html">站内消息</a><br>
+         <a class="u" href="user_salary.html">历年工资</a>
+         </div>
+         <div id="user_block" >		<!右块内容>
+         <h1>站内消息</h1>
+         <h3>写消息</h3>
+         <form action="#" method="post" >
+         收信人：<input type="text" name="name" />
+         消息标题：<input type="text" name="emailtitle" />
+         <br><textarea name="a" style=" margin:5px; width:430px;height:100px;">这里写内容</textarea>
+         <input type="submit" value="发送" />
+         </form>
+         <h3>信箱</h3>
+         <table border="0" width=100% >
+         	<tr>
+            <td>姓名</td><td>标题</td><td>时间</td><td>状态</td><td>操作</td>
+            </tr>
+            <tr>
+            <td>LMC</td><td>Hello world!</td><td>2015-11-18</td><td>已发送</td>
+            <td><input type="button" value="查看" name="watch" /><input type="button" value="回复" name="reply"/></td>
+            </tr>
+         </table>
+         </div>
+    </div>
+</body>

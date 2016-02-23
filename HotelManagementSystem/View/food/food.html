@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>宏烽酒店管理系统</title>
+
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+    <script src="../../js/hf_hotel.js"></script>  
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body onLoad="food_load()">
+    <!--导航条-->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    	<div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../huangzeqin/come_back.php">宏烽酒店管理系统</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">友情网站 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://www.baidu.com/">百度</a></li>
+                <li><a href="http://www.bootcss.com/">bootstrap中文网</a></li>
+                <li><a href="http://taobao.com/">淘宝网</a></li>
+              </ul>
+            </li>
+          </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="../../huangzeqin/user/user_center.html" id="user_name5"></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人中心 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="../../huangzeqin/user/user_center.html">基本资料</a></li>
+                <li><a href="../../huangzeqin/user/user_money.html">申请资金</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="../../huangzeqin/user/user_password.html">修改密码</a></li>
+                <li><a href="../../huangzeqin/exit.php">退出登录</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <br><br><br><!--头图-->
+        <img src="../../Image/food_logo.jpg" class="img-rounded" height="120px" width="100%">
+        <!--导航-->
+        <div class="col-lg-10" >
+          <br/>
+          <ul class="nav nav-pills">
+            <li role="presentation" class="active col-lg-3 text-center"><a href="food.html">菜单管理</a></li>
+            <li role="presentation" class="col-lg-3  text-center"><a href="food_order.html">订单管理</a></li>
+          </ul>
+          <br/>
+        </div>
+      </div>
+      
+      <div class="row"> 
+        <!--左导航-->
+        <div class="col-lg-2 img-thumbnail">
+          <div class="row">
+            <br/>
+            <ul class="nav nav-stacked">
+              <li role="presentation" class="active col-lg-15 text-center"><a href="#">全部</a></li>
+              <li role="presentation" class="col-lg-15 text-center"><a href="#">前菜/小吃</a></li>
+              <li role="presentation" class="col-lg-15 text-center"><a href="#">主食</a></li>
+              <li role="presentation" class="col-lg-15 text-center"><a href="#">汤/饮料</a></li>
+              <li role="presentation" class="col-lg-15 text-center"><a href="#">沙拉/甜品</a></li>
+            </ul>
+          </div>
+          <div class="row col-lg-12 ">
+            <h2 >新增菜式</h2>
+            <form role="form" action="add_food.php" method="post" enctype="multipart/form-data">
+              <div class="form-group">
+                 <label for="type">类型</label>
+                 <select class="form-control" name="type" id="type">
+                    <option>前菜/小吃</option>
+                    <option>主食</option>
+                    <option>汤/饮料</option>
+                    <option>沙拉/甜品</option>
+                 </select>  
+              </div>            
+              <div class="form-group">
+                 <label for="name">食品名称</label>
+                 <input type="text" class="form-control" id="name" name="name">
+              </div>
+              <div class="form-group">
+                 <label for="pay">食品价格</label>
+                 <input type="text" class="form-control" id="pay" name="pay">
+              </div>               
+              <div class="form-group">
+				 <label for="file">食品照片:</label>
+                 <input type="file"   name="file" id="file" /> 
+              </div>
+			   <button type="submit" class="btn btn-default btn-primary" id="food_add2">确定</button>
+            </form> 
+           
+          </div>                  
+        </div>
+        <!--右菜单-->
+        <br/>
+        <div class="col-lg-10 ">
+          <form action="#" method="post" role="form" id="f1"> 
+            <div class="row" id="food_item_table">
+              
+          </form>
+          <div>              
+            <button style="z-index:100;position:fixed;right:200px;bottom:30px;" type="button" id="food_add1" class="btn btn-primary btn-lg">生成订单</button>
+          </div>
+                
+
+          <!-- 模态框（Modal） -->
+          <div class="modal fade" id="mymodal_food">
+             <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                       订单
+                    </h4>
+                  </div>
+                  <div class="modal-body">
+                    <table class="table " id="modaltable">
+                      <tr  ><br/>
+                        <th><span></span>序号<span></span></th>
+                        <th><span></span>菜名<span></span></th>
+                        <th><span></span>数量<span></span></th>
+                        <th><span></span>单价<span></span></th>
+                      </tr>
+                    </table> 
+					<label for="name" id="food_add_sum"></label>
+                    <div style="width:900px;height:200px;">              
+                      <div  class="col-lg-3 ddd">
+                        <br/>
+                        <input type="radio" name="choose2" id="堂食"/>堂食
+                        <p id="p_tablenum" >桌号：<input type="text" class="form-control" name="tablenum" id="tablenum"></p>
+                      </div>
+                      <div  class="col-lg-3 xbb">
+                        <br/>
+                        <input type="radio" name="choose2" id="外卖"/>外卖
+                        <p id="p_address">地址：<input class="form-control" type="text" name="address" id="address"></p>
+                        <p id="p_phone" >电话：<input class="form-control" type="text" name="phone" id="phone"></p>
+                      </div> 
+                    </div>   
+						<input type="hidden" name="dep" id="dep" value="餐饮部"/>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default"  data-dismiss="modal">关闭</button>
+                      <button type="button" class="btn btn-primary"  id="food_add3">确认订单</button>
+                                 
+                  </div>
+                </div><!-- /.modal-content -->
+             </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->          
+        </div>
+      </div>
+    </div><!-- /.container -->
+
+
+
+  </body>  
+</html>

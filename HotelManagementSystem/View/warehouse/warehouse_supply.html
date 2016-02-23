@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>仓库管理系统|warehouse manage system</title>
+
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+    <script src="../../js/hf_hotel.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+ <body onLoad="food_load()">
+    <!--导航条-->
+    
+    <!--导航条-->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    	<div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../huangzeqin/come_back.php">宏烽酒店管理系统</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">友情网站 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://www.baidu.com/">百度</a></li>
+                <li><a href="http://www.bootcss.com/">bootstrap中文网</a></li>
+                <li><a href="http://taobao.com/">淘宝网</a></li>
+              </ul>
+            </li>
+          </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="../../huangzeqin/user/user_center.html" id="user_name5"></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人中心 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="../../huangzeqin/user/user_center.html">基本资料</a></li>
+                <li><a href="../../huangzeqin/user/user_money.html">申请资金</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="../../huangzeqin/user/user_password.html">修改密码</a></li>
+                <li><a href="../../huangzeqin/exit.php">退出登录</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    </nav>
+    
+    <div class="container">
+    <div class="row">
+    	<br><br><br><!--头图-->
+        <img src="../../Image/warehouse_logo.jpg" class="img-rounded" height="120px" width="100%">
+        <!--导航-->
+        	<div class="col-lg-10">
+            <br>
+            <ul class="nav nav-pills">
+              <li role="presentation" class="col-lg-3 text-center"><a href="warehouse_io.html">出入库记录</a></li>
+              <li role="presentation" class="col-lg-3  text-center"><a href="warehouse_item.html">仓库物品管理</a></li>
+              <li role="presentation" class="active col-lg-3  text-center"><a href="warehouse_supply.html">供应商管理</a></li>
+            </ul>
+            <br>
+            </div>
+           	<div class="col-lg-4 img-thumbnail">
+        	<h2>新增</h2>
+          <form class="form-horizontal" method="post" >
+    		<div class="form-group">
+   		   		<label for="inputEmail3" class="col-sm-4 control-label">名称</label>
+      			<div class="col-sm-8">
+        		<input type="text" name="sup" class="form-control" id="ware_supply_add_sup1" placeholder="sup">
+      			</div>
+    		</div>
+            <div class="form-group">
+   		   		<label for="inputEmail3" class="col-sm-4 control-label">负责人</label>
+      			<div class="col-sm-8">
+        		<input type="text" name="name" class="form-control" id="ware_supply_add_name1" placeholder="name">
+      			</div>
+    		</div>
+            <div class="form-group">
+   		   		<label for="inputEmail3" class="col-sm-4 control-label">联系方式</label>
+      			<div class="col-sm-8">
+        		<input type="text" name="tel" class="form-control" id="ware_supply_add_tel1" placeholder="tel">
+      			</div>
+    		</div>
+            <div class="form-group">
+   		   		<label for="inputEmail3" class="col-sm-4 control-label">地址</label>
+      			<div class="col-sm-8">
+        		<input type="text" name="add" class="form-control" id="ware_supply_add_add1" placeholder="add">
+      			</div>
+    		</div>
+    		<div class="form-group">
+      		<div class="col-sm-offset-2 col-sm-10">
+            <button class="btn btn-primary" type="button"  id="ware_supply_add1" >确定新增</button>
+      		</div>
+    		</div>
+  			</form>
+         </div>
+         <div class="col-lg-8 img-thumbnail">
+         <h2>查询</h2>
+         <div style="cursor:pointer" >
+         <table class="table table-bordered table-hover" id = "ware_supply_table">
+            	<tr >
+            		<th>#</th>
+                	<th>名称</th>
+					<th>负责人</th>
+					<th>联系方式</th>
+					<th>地址</th>
+				</tr>
+
+          </table>
+          </div>
+         </div>
+    </div>
+    </div>
+
+<!--模态框1 -->
+<div class="modal fade" id="ware_supply_m1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+        	<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title">新增供应商确认</h4>
+			</div>
+			<div class="modal-body" style="height:260px">
+            <form class="form-horizontal" method="post" action="Supplier_Add.php">
+            <div class="form-group">
+            <label for="inputEmail3" class="col-sm-4 control-label">名称</label>
+      			<div class="col-sm-8">
+            	<input id="ware_supply_add_sup2" name="sup" class="form-control" readonly />
+                </div>
+            </div>
+            <div class="form-group">
+            <label for="inputEmail3" class="col-sm-4 control-label">负责人</label>
+      			<div class="col-sm-8">
+            	<input id="ware_supply_add_name2" name="name" class="form-control" readonly />
+                </div>
+            </div>
+            <div class="form-group">
+            <label for="inputEmail3" class="col-sm-4 control-label">联系方式</label>
+      			<div class="col-sm-8">
+            	<input id="ware_supply_add_tel2" name="tel" class="form-control" readonly />
+                </div>
+            </div>
+            <div class="form-group">
+            <label for="inputEmail3" class="col-sm-4 control-label">地址</label>
+      			<div class="col-sm-8">
+            	<input id="ware_supply_add_add2" name="add" class="form-control" readonly />
+                </div>
+            </div>
+			<input id="ware_supply_add_add2" type = "submit" value = "提交" class="form-control  btn btn-primary"  />
+            </form>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--模态框2 -->
+<div class="modal fade" id="ware_supply_m2">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+        	<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title">模态弹出窗标题</h4>
+			</div>
+			<div class="modal-body" style="height:380px">
+            <form class="form-horizontal" method="post" action="update_supplier.php">
+              <div class="form-group">
+              <label for="inputEmail3" class="col-sm-4 control-label">#</label>
+                  <div class="col-sm-8">
+                  <input id="ware_supply_find_id2" name = "id" class="form-control" readonly />
+                  </div>
+              </div>
+              <div class="form-group">
+              <label for="inputEmail3" class="col-sm-4 control-label">名称</label>
+                  <div class="col-sm-8">
+                  <input id="ware_supply_find_sup2" name = "name" class="form-control" />
+                  </div>
+              </div>
+              <div class="form-group">
+              <label for="inputEmail3" class="col-sm-4 control-label">负责人</label>
+                  <div class="col-sm-8">
+                  <input id="ware_supply_find_name2" name = "people" class="form-control" />
+                  </div>
+              </div>
+              <div class="form-group">
+              <label for="inputEmail3" class="col-sm-4 control-label">联系方式</label>
+                  <div class="col-sm-8">
+                  <input id="ware_supply_find_tel2" name = "tel" class="form-control" />
+                  </div>
+              </div>
+              <div class="form-group">
+              <label for="inputEmail3" class="col-sm-4 control-label">地址</label>
+                  <div class="col-sm-8">
+                  <input id="ware_supply_find_add2" name = "add" class="form-control" />
+                  </div>
+              </div>
+			  	<input id="ware_supply_add_add2" type = "submit" value = "保存修改" class="form-control  btn btn-primary"  />
+            </form>
+			
+			
+            <form class="form-horizontal" method="post" action="delete_supplier.php">
+              <div class="form-group">
+                  <div class="col-sm-8">
+                  <input id="ware_supply_find_id8" type="hidden" name = "detid" class="form-control" />
+                  </div>
+              </div>
+			  	<input id="ware_supply_add_add8" type = "submit" value = "删除本供应商记录" class="form-control btn btn-primary"  />
+			</form>
+			</div>
+
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+</html>

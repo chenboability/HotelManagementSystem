@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>宏烽酒店管理系统</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="../js/hf_hotel.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body >
+    <div class="container" style="margin:30px 40px 120px 40px;">
+    <div><img src="../Image/register_logo.jpg" class="img-rounded" height="120px" width="100%"></div>
+		<div id="myCarousel" class="carousel slide col-lg-7">
+		   <!-- 轮播（Carousel）指标 -->
+		   <ol class="carousel-indicators">
+		      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		      <li data-target="#myCarousel" data-slide-to="1"></li>
+		      <li data-target="#myCarousel" data-slide-to="2"></li>
+		      <li data-target="#myCarousel" data-slide-to="3"></li>
+		   </ol>
+		   <!-- 轮播（Carousel）项目 -->
+		   <div class="carousel-inner">
+		      <div class="item active" style="height:350px;">
+		         <img src="../Image/room.jpg" alt="First slide">
+		      </div>
+		      <div class="item" style="height:350px;">
+		         <img src="../Image/food.jpg" alt="Second slide">
+		      </div>
+		      <div class="item" style="height:350px;">
+		         <img src="../Image/money.jpg" alt="Third slide">
+		      </div>
+		      <div class="item" style="height:350px;">
+		         <img src="../Image/warehouse.jpg" alt="Third slide">
+		      </div>
+		   </div>
+		   <!-- 轮播（Carousel）导航 -->
+		   <a class="carousel-control left" href="#myCarousel"
+		      data-slide="prev">&lsaquo;</a>
+		   <a class="carousel-control right" href="#myCarousel"
+		      data-slide="next">&rsaquo;</a>
+		</div>
+		<div class="col-lg-1 "></br></div>
+        <div class="col-lg-4">
+        	<div style="margin=0 20px 0 20px;">
+		      <form action="../login.php" method="post">
+		        <h2 >登陆</h2>
+		        <label for="login_id" class="sr-only">账号</label>
+		        <input type="text" id="login_id" name="login_id" class="form-control" placeholder="账号" required autofocus>
+		        <label for="login_password" class="sr-only">密码</label>
+		        <input type="password" id="login_password" name="login_password" class="form-control" placeholder="密码" required>
+		        <div class="checkbox">
+		          <label>
+		            <input type="checkbox" value="remember-me">记住我
+		          </label>
+		        </div>
+		        <button class="btn btn-lg btn-primary btn-block" type="submit" id="login-enter">登陆</button>
+		        <div class="pull-right" style="margin:60px 0;"><a href="register.html">注册新账号</a></div>
+		      </form>
+	        </div>
+        </div>
+    </div> <!-- /container -->
+  </body>
+ </html>

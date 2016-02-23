@@ -1,0 +1,46 @@
+*{margin:0; padding:0;font-family:微软雅黑;}
+
+div#login{height: 600px;width: 100%;}
+div#login-title{background-color: gray;height: 120px; width: 100%;}
+a.big-title  {text-decoration:none;margin:10px; font-size: 3em; letter-spacing:0.3em;}
+div#login-middle{width:90%; margin:20px auto;height: 450px; background-color:#CCC;}
+div#login-main{width:300px;height:300px;margin:40px 80px auto;border: solid 2px white;font-size:19px;font-weight: 500; float:right;color:#FFF}
+p#main-title{padding:10px 20px;}
+div#input{border-width: 2px 0 0 0;border-style: solid;border-color: white;padding:10px 20px;}
+input#submit{margin: 20px;}
+input#forget{margin: 20px;}
+
+
+div#money{height: 600px;}
+div#direct{height:30px; width:100%; background-color:#bebebe;}
+ul#director1{list-style-type:none;margin:0;padding:0;}
+li.director1-item{float:left;}
+#direct a:link,a:visited{display:block;width:315px; height:22px; font-weight:bold;color:#FFFFFF;background-color:#bebebe;text-align:center;padding:4px;text-decoration:none;text-transform:uppercase;}
+#direct a:hover{background-color: #cc0000;}
+
+div#money_body{ height:400px; width:100%;}
+div#money_body2{ height:300px; width:700px; margin-left:20%; margin-top:5%;}
+#money_body2 span{margin-left: 12px;margin-right: 12px; }
+#money_body2 { margin:5px 0;font-size:18px; font-family:微软雅黑;color: black; background-color:#CCC;}
+
+div#foodbody{ height:500px ;margin:2% 7%;width:86%;}
+#foodbody span{margin-left: 12px;margin-right: 12px; }
+div#foodbodyleft{height:500px; width:15%; margin:5px; float:left; padding:20px 0 0 20px; background-color:#333; display:inline;}
+div#foodbodyright{height:500px; width:80%; margin:5px; float:left; padding:5px; background-color:#CCC; display:inline;}
+div#table1{height: 380px;overflow: auto;margin-top: 20px}
+div#t{width: 40%;float: left;display: inline;}
+div#w{width: 50%;float: left;display: inline;}
+a.f {text-decoration:none;}
+
+div#foodorder { height:300px;  margin:5% 20% 0 20%;font-size:18px; background-color:#CCC;}
+#foodorder span{margin-left: 12px;margin-right: 12px; }
+
+div#roombody { height:300px;  margin:5% 20% 0 20%;font-size:18px; background-color:#CCC;}
+#roombody span{margin-left: 12px;margin-right: 12px; }
+div#table2{height: 180px;overflow: auto;margin-top: 20px}
+
+
+div#user_link{height:30px; width:80px; float:right;}
+div#user_main{height:500px; width:15%; margin:5px; float:left; padding:5px; background-color:#CCC; display:inline;}
+div#user_block{height:500px; width:80%; margin:5px; float:left; padding:5px; background-color:#333; display:inline;color:#CCC}
+a.u {text-decoration:none;margin:20px 20px;}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>宏烽酒店管理系统</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="../js/hf_hotel.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container" >
+      <div class="row">
+        <br><br><br><!--头图-->
+        <img src="../Image/register_logo.jpg" class="img-rounded" height="120px" width="100%">
+        <!--导航-->
+      <div><br/></div>
+      <div class="col-lg-8 col-md-offset-2 " style="margin:0 0 100px 200px;padding:0 0 20px 0;">
+        <h3 style="margin:20px 0 30px 20px;">注册账号</h3>
+        <form action="../employee_add.php" class="form-horizontal" method="post" >
+          <div class="form-group">
+              <label for="inputEmail3" class="col-sm-4 control-label">账号</label>
+              <div class="col-sm-4">
+              <input type="text" name="register_id" class="form-control" id="register_id"  >
+              </div>
+          </div><div class="form-group">
+              <label for="inputEmail3" class="col-sm-4 control-label">密码</label>
+              <div class="col-sm-4">
+              <input type="password" name="register_password" class="form-control" id="register_password"  >
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="inputEmail3" class="col-sm-4 control-label">再次输入密码</label>
+              <div class="col-sm-4">
+              <input type="password" name="register_password2" class="form-control" id="register_password2"  >
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="inputEmail3" class="col-sm-4 control-label">姓名</label>
+              <div class="col-sm-4">
+              <input type="text" name="register_name" class="form-control" id="register_name"  >
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="inputEmail3" class="col-sm-4 control-label">性别</label>
+              <div class="col-sm-4">
+              <select class="form-control" id="register_sex" name="register_sex">
+                <option value="1">男</option>
+                <option value="2">女</option>
+              </select>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="inputEmail3" class="col-sm-4 control-label">邮箱</label>
+              <div class="col-sm-4">
+              <input type="text" name="register_email" class="form-control" id="register_email" >
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="inputEmail3" class="col-sm-4 control-label">手机号码</label>
+              <div class="col-sm-4">
+              <input type="text" name="register_phone" class="form-control" id="register_phone" >
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="inputEmail3" class="col-sm-4 control-label">生日</label>
+              <div class="col-sm-4">
+              <input type="date" name="register_bth" class="form-control" id="register_bth" >
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="inputEmail3" class="col-sm-4 control-label">入职时间</label>
+              <div class="col-sm-4">
+              <input type="date" name="register_date" class="form-control" name="register_date" >
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="inputEmail3" class="col-sm-4 control-label">部门</label>
+              <div class="col-sm-4">
+              <select class="form-control" name="register_department" id="register_department">
+                <option value="1">餐饮部</option>
+                <option value="2">客房部</option>
+                <option value="3">财务部</option>
+                <option value="4">后勤部</option>
+              </select>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="inputEmail3" class="col-sm-4 control-label">职务</label>
+              <div class="col-sm-4">
+              <input type="text" name="register_job" class="form-control" id="register_job" >
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="inputEmail3" class="col-sm-4 control-label">工资卡</label>
+              <div class="col-sm-4">
+              <input name="register_card" class="form-control" id="register_card" >
+              </div>
+          </div>
+          <div class="form-group ">
+              <div class="col-md-offset-4">
+              <p><input type="checkbox"  id="user_cen_card1" >我已阅读并同意相关服务条款和隐私政策</p>
+              </div>
+          </div>
+          <div class="col-lg-5 col-md-offset-5 ">
+           <input  class="btn btn-primary btn-lg " type="submit" name="register" id="user_cen1" value="  提交注册  " />
+           </div>
+        </form>
+        <div class="col-sm-offset-4 col-sm-4">
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
